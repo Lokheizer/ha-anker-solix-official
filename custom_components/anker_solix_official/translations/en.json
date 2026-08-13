@@ -89,6 +89,30 @@
       "pv_power": {
         "name": "Solar Power"
       },
+      "pv1_voltage": {
+        "name": "PV1 Voltage"
+      },
+      "pv1_current": {
+        "name": "PV1 Current"
+      },
+      "pv2_voltage": {
+        "name": "PV2 Voltage"
+      },
+      "pv2_current": {
+        "name": "PV2 Current"
+      },
+      "pv3_voltage": {
+        "name": "PV3 Voltage"
+      },
+      "pv3_current": {
+        "name": "PV3 Current"
+      },
+      "pv4_voltage": {
+        "name": "PV4 Voltage"
+      },
+      "pv4_current": {
+        "name": "PV4 Current"
+      },
       "battery_charging_power": {
         "name": "Battery Charging Power"
       },

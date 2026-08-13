@@ -23,6 +23,7 @@ batch_read_ranges:
   input:
     - 10000-10050
     - 10090-10156
+    - 10167-10174
     - 10208-10265
     - 32768-32774
   holding:
@@ -95,6 +96,89 @@ read_quantities:
     count: 2
     icon: "mdi:solar-power-variant"
     internal: true
+
+  # Per-string PV input measurements, shown in the device's Diagnostic section.
+  # Signed on purpose: at night the inverter reports small negative ADC offsets,
+  # which decoded as unsigned would turn into nonsense values.
+  pv1_voltage:
+    translation_key: "pv1_voltage"
+    address: 10167
+    data_type: "INT16"
+    unit: "V"
+    gain: 10
+    count: 1
+    icon: "mdi:flash"
+    entity_category: "diagnostic"
+
+  pv1_current:
+    translation_key: "pv1_current"
+    address: 10168
+    data_type: "INT16"
+    unit: "A"
+    gain: 100
+    count: 1
+    icon: "mdi:current-dc"
+    entity_category: "diagnostic"
+
+  pv2_voltage:
+    translation_key: "pv2_voltage"
+    address: 10169
+    data_type: "INT16"
+    unit: "V"
+    gain: 10
+    count: 1
+    icon: "mdi:flash"
+    entity_category: "diagnostic"
+
+  pv2_current:
+    translation_key: "pv2_current"
+    address: 10170
+    data_type: "INT16"
+    unit: "A"
+    gain: 100
+    count: 1
+    icon: "mdi:current-dc"
+    entity_category: "diagnostic"
+
+  pv3_voltage:
+    translation_key: "pv3_voltage"
+    address: 10171
+    data_type: "INT16"
+    unit: "V"
+    gain: 10
+    count: 1
+    icon: "mdi:flash"
+    entity_category: "diagnostic"
+
+  pv3_current:
+    translation_key: "pv3_current"
+    address: 10172
+    data_type: "INT16"
+    unit: "A"
+    gain: 100
+    count: 1
+    icon: "mdi:current-dc"
+    entity_category: "diagnostic"
+
+  pv4_voltage:
+    translation_key: "pv4_voltage"
+    address: 10173
+    data_type: "INT16"
+    unit: "V"
+    gain: 10
+    count: 1
+    icon: "mdi:flash"
+    entity_category: "diagnostic"
+
+  pv4_current:
+    translation_key: "pv4_current"
+    address: 10174
+    data_type: "INT16"
+    unit: "A"
+    gain: 100
+    count: 1
+    icon: "mdi:current-dc"
+    entity_category: "diagnostic"
 
   # Battery charging power - shows charging power (negative values from register become positive)
   # When discharging, this sensor shows 0

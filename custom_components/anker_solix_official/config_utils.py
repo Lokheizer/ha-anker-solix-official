@@ -141,6 +141,9 @@ def parse_device_configuration(cfg: dict) -> tuple[dict[str, Any], list[tuple[in
                     dp["capability_entity"] = item.get("capability_entity")
                 if item.get("option_capability_bits"):
                     dp["option_capability_bits"] = item.get("option_capability_bits")
+                # Support entity category ("diagnostic" / "config")
+                if item.get("entity_category"):
+                    dp["entity_category"] = item.get("entity_category")
                 # Support visibility control
                 if item.get("visibility_entity"):
                     dp["visibility_entity"] = item.get("visibility_entity")

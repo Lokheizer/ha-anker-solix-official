@@ -89,6 +89,30 @@
       "pv_power": {
         "name": "PV功率"
       },
+      "pv1_voltage": {
+        "name": "PV1电压"
+      },
+      "pv1_current": {
+        "name": "PV1电流"
+      },
+      "pv2_voltage": {
+        "name": "PV2电压"
+      },
+      "pv2_current": {
+        "name": "PV2电流"
+      },
+      "pv3_voltage": {
+        "name": "PV3电压"
+      },
+      "pv3_current": {
+        "name": "PV3电流"
+      },
+      "pv4_voltage": {
+        "name": "PV4电压"
+      },
+      "pv4_current": {
+        "name": "PV4电流"
+      },
       "battery_charging_power": {
         "name": "电池充电功率"
       },

@@ -89,6 +89,30 @@
       "pv_power": {
         "name": "Zonne-energie"
       },
+      "pv1_voltage": {
+        "name": "PV1 spanning"
+      },
+      "pv1_current": {
+        "name": "PV1 stroom"
+      },
+      "pv2_voltage": {
+        "name": "PV2 spanning"
+      },
+      "pv2_current": {
+        "name": "PV2 stroom"
+      },
+      "pv3_voltage": {
+        "name": "PV3 spanning"
+      },
+      "pv3_current": {
+        "name": "PV3 stroom"
+      },
+      "pv4_voltage": {
+        "name": "PV4 spanning"
+      },
+      "pv4_current": {
+        "name": "PV4 stroom"
+      },
       "battery_charging_power": {
         "name": "Laadvermogen van de batterij"
       },

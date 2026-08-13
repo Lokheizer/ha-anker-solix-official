@@ -89,6 +89,30 @@
       "pv_power": {
         "name": "Solarstrom"
       },
+      "pv1_voltage": {
+        "name": "PV1 Spannung"
+      },
+      "pv1_current": {
+        "name": "PV1 Strom"
+      },
+      "pv2_voltage": {
+        "name": "PV2 Spannung"
+      },
+      "pv2_current": {
+        "name": "PV2 Strom"
+      },
+      "pv3_voltage": {
+        "name": "PV3 Spannung"
+      },
+      "pv3_current": {
+        "name": "PV3 Strom"
+      },
+      "pv4_voltage": {
+        "name": "PV4 Spannung"
+      },
+      "pv4_current": {
+        "name": "PV4 Strom"
+      },
       "battery_charging_power": {
         "name": "Batterieladeleistung"
       },

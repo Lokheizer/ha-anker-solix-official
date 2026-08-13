@@ -7,6 +7,7 @@ import logging
 from typing import Any, Callable, Coroutine, TYPE_CHECKING
 
 from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import EntityCategory
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ServiceValidationError
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
@@ -53,6 +54,19 @@ class AnkerSolixBaseEntity(CoordinatorEntity):
         # Set icon if configured
         if "icon" in entity_config:
             self._attr_icon = entity_config["icon"]
+
+        # Set entity category if configured ("diagnostic" or "config"), which
+        # moves the entity into the matching section of the device page
+        entity_category = entity_config.get("entity_category")
+        if entity_category:
+            try:
+                self._attr_entity_category = EntityCategory(entity_category)
+            except ValueError:
+                _LOGGER.warning(
+                    "Invalid entity_category '%s' for %s, ignoring",
+                    entity_category,
+                    entity_key,
+                )
 
     @property
     def available(self) -> bool:
