@@ -19,12 +19,17 @@ product_info:
 # Batch read ranges with register type specification
 # holding: read_holding_registers (function code 03) - for RW registers
 # input: read_input_registers (function code 04) - for RO registers
+#
+# The firmware is picky about where a read request starts: a narrow request
+# can succeed yet return zeros for its trailing registers, while a request
+# with an earlier start and a larger count returns them correctly. 10156-10265
+# is a window known to read completely, so the PV string registers (10167-10174)
+# and everything up to 10265 are served from it rather than from a tighter range.
 batch_read_ranges:
   input:
     - 10000-10050
     - 10090-10156
-    - 10167-10174
-    - 10208-10265
+    - 10156-10265
     - 32768-32774
   holding:
     - 10060-10072
